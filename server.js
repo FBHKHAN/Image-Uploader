@@ -8,9 +8,9 @@ app.set('views', __dirname + '/views');
 
 app = config(app);
 
-mongoose.connect('mongodb://localhost/imgPloader');
-mongoose.connection.on('open', function () {
-    console.log('Mongoose connected');
+mongoose.connect('mongodb://posturimagedb:P@ssw0rd#@!@kahana.mongohq.com:10089/app26');
+mongoose.connection.on('open', function() {
+    console.log('Mongoose connected.');
 });
 
 var server = app.listen(app.get('port'), function () {

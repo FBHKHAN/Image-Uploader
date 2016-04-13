@@ -7,8 +7,7 @@ var path = require('path'),
     morgan = require('morgan'),
     methodOverride = require('method-override'),
     errorHandler = require('errorhandler'),
-    moment = require('moment'),
-    multer = require('multer');
+    moment = require('moment');
 
 module.exports = function (app) {
 
@@ -26,16 +25,10 @@ module.exports = function (app) {
     app.set('view engine', 'handlebars');
     app.use(morgan('dev'));
 
-    //var upload = multer({uploadDir: path.join(__dirname, '../public/upload/temp')});
-
     app.use(bodyParser.json());
     app.use(bodyParser.urlencoded({
         extended: true
     }));
-
-    /*app.use(bodyParser({
-        uploadDir: path.join(__dirname, '../public/upload/temp')
-    }));*/
 
     app.use(methodOverride());
     app.use(cookieParser('some-secret-value-here'));

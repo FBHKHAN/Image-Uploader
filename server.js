@@ -8,7 +8,7 @@ app.set('views', __dirname + '/views');
 
 app = config(app);
 
-mongoose.connect('mongodb://heroku_g5dd4b63:47jv6ioesmq0qk09r024tn4tp5@ds023550.mlab.com:23550/heroku_g5dd4b63');
+mongoose.connect('mongodb://posturimagedb:P@ssw0rd#@!.mlab.com:23550/heroku_g5dd4b63');
 mongoose.connection.on('open', function() {
     console.log('Mongoose connected.');
 });
